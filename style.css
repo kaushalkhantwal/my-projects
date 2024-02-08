@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambay&family=Josefin+Sans:wght@100;200&family=Montserrat+Alternates:ital@1&family=Poppins&display=swap');
+
+@font-face {
+    font-family: neo;
+    src: url(./64d3dd9edfb41666c35b15bf_NeueHaasDisplay-Mediu.woff);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    position: relative;
+    z-index: 10;
+}
+
+.page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav {
+    padding: 2vw 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nav-part2 h4 {
+    padding: 10px 28px;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    border-radius: 50px;
+    font-size: 1.1vw;
+    font-weight: 400;
+    transition: all ease 0.4s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.nav-part2 h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    bottom: -100%;
+    left: 0;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+.nav-part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+.nav-part2 h4 a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    z-index: 9;
+}
+
+.nav-part2 h4:hover a {
+    color: white;
+}
+
+
+.center {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(192, 191, 191);
+    padding-bottom: 2.5vw;
+}
+
+.left h3 {
+    width: 30vw;
+    font-size: 1.6vw;
+    line-height: 1.3;
+}
+
+.center h1 {
+    font-size: 8vw;
+    line-height: 6.4vw;
+    text-align: right;
+    font-family: neo;
+}
+
+.page1 video {
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 5vw;
+    position: relative
+}
+
+.hero-shape {
+    position: absolute;
+    height: 36vw;
+    width: 36vw;
+    right: 0;
+    top: 75vh;
+}
+
+.hero1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: #FE320A;
+    filter: blur(20px);
+}
+
+.hero2 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background-color: #FE320A;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate
+}
+
+.hero3 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background: linear-gradient(#FE320A, rgb(255, 30, 0));
+    filter: blur(30px);
+    animation-name: anime1;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -5%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -3%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+
+.page2 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 7vw 0;
+    background-color: #EFEAE3;
+    position: relative;
+}
+
+.moving-text {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.move {
+    white-space: nowrap;
+    display: inline-block;
+    animation: moveing;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.moving-text h1 {
+    font-size: 8vw;
+    display: inline-block;
+    font-family: neo;
+}
+
+.gola {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+
+@keyframes moveing {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.page2-bottom {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vw;
+    margin-top: 12vw;
+    position: relative;
+    z-index: 9;
+}
+
+.page2-bottom h1 {
+    font-size: 4vw;
+    font-family: neo;
+    width: 55%;
+    line-height: 4vw;
+}
+
+.bottom2 {
+    width: 25%;
+    margin-top: 15vw;
+}
+
+.bottom2 img {
+    height: 180px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.bottom2 p {
+    margin-top: 4vw;
+    font-size: 1vw;
+    width: 93%;
+}
+
+.page2 .gooey {
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #FE320A, #fe800a);
+    position: absolute;
+    top: 65%;
+    left: 28%;
+    filter: blur(25px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes gooey {
+    from {
+        filter: blur(25px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(25px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+
+
+
+.page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 6vw 0;
+}
+
+.elem {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid rgb(189, 189, 189);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    overflow: hidden;
+}
+
+.elem h2 {
+    font-size: 3.5vw;
+    font-family: neo;
+    position: relative;
+    z-index: 9;
+}
+
+.elem .elem-right h4 {
+    position: relative;
+    z-index: 9;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.elem .elem-right h5 {
+    position: relative;
+    z-index: 9;
+    font-weight: 100;
+    opacity: 0.7;
+}
+
+.elem .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.2s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
+
+.fixed-image {
+    height: 28vw;
+    width: 22vw;
+    position: fixed;
+    border-radius: 12px;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center
+}
+
+.page4 {
+    height: 70vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 2vw;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    border-left: 1px solid rgb(165, 165, 165);
+    width: 30%;
+    padding: 0 2vw;
+}
+
+.swiper-slide p {
+    font-size: 1vw;
+    margin-top: 1vw;
+}
+
+
+.page5 {
+    height: 100vh;
+    width: 100%;
+
+}
+
+
+.footer {
+    padding: 1vw 3vw;
+    position: fixed;
+    height: 107vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.footer h1 {
+    font-size: 23vw;
+    font-family: neo;
+}
+
+.footer1 {
+    padding: 0 3vw;
+    margin-top: 10vw;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer1 .fleft {
+    margin-top: 1vw;
+}
+
+.footer1 .fleft h3 {
+    font-size: 2.3vw;
+    font-family: neo;
+}
+
+.footer1 .fright {
+    width: 30%;
+}
+
+.footer1 .fright p {
+    font-size: 1.5vw;
+}
+
+
+.footer2 {
+    height: 8vh;
+    width: 100%;
+    border-top: 1px solid white;
+}
+
+.loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all ease 1s;
+}
+
+ .loader h3 {
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-family: neo;
+    font-size: 4vw;
+    color: orangered;
+    position: absolute;
+}
